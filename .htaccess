@@ -1,0 +1,7 @@
+# Put this file in the /car/ directory (where index.html is) on your shared host
+RewriteEngine On
+RewriteBase /car/
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /car/index.html [L,QSA]
